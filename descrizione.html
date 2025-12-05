@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrizione - Milano</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar fixed-top navbar-dark bg-transparent p-3 transition-navbar">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <button class="btn btn-light btn-burger shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLaterale">
+                <i class="fas fa-bars"></i> <span class="d-none d-sm-inline">MENU</span>
+            </button>
+            <span class="navbar-brand fw-bold text-white text-shadow fs-3">MILANO</span>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuLaterale">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Navigazione</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center text-center">
+            <ul class="navbar-nav fs-3">
+                <li class="nav-item my-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-warning active" href="descrizione.html">Descrizione</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="highlights.html">Highlights</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="mezzi.html">Mezzi Pubblici</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="mappa.html">Mappa</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="page-header d-flex align-items-center justify-content-center text-center text-white" 
+            style="background: url('img/des_sfondo.jpg') no-repeat center center/cover;">
+        <div class="overlay"></div>
+        <div class="content z-1 container">
+            <h1 class="fw-bold display-3">L'Anima della Città</h1>
+            <p class="lead">Passato, presente e futuro si incontrano.</p>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+                <p class="fs-5 text-secondary">
+                    Milano non è solo la capitale economica d'Italia. È un luogo dove le antiche basiliche si riflettono nelle vetrate dei grattacieli. Scopri le tre anime che compongono l'identità milanese.
+                </p>
+                <div class="separator mx-auto bg-dark"></div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow hover-card">
+                    <img src="img/des_cast_sfor.jpg" class="card-img-top" alt="Storia di Milano">
+                    <div class="card-body p-4">
+                        <div class="mb-3 text-warning"><i class="fas fa-landmark fa-2x"></i></div>
+                        <h3 class="card-title fw-bold">Storia e Arte</h3>
+                        <p class="card-text text-muted">Dai Visconti agli Sforza, Milano ha una storia nobile. Il Castello Sforzesco e l'Ultima Cena di Leonardo da Vinci sono testimoni di un passato glorioso che ancora vive nelle strade del centro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow hover-card">
+                    <img src="img/vetrina1.jpg" class="card-img-top" alt="Milano Fashion Week">
+                    <div class="card-body p-4">
+                        <div class="mb-3 text-warning"><i class="fas fa-tshirt fa-2x"></i></div>
+                        <h3 class="card-title fw-bold">Capitale della Moda</h3>
+                        <p class="card-text text-muted">Il "Quadrilatero della Moda" è famoso in tutto il mondo. Due volte l'anno, la città si trasforma per la Fashion Week, attirando stilisti, modelle e celebrità da ogni angolo del pianeta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow hover-card">
+                    <img src="img/bos_ver_des.jpg" class="card-img-top" alt="Milano Business">
+                    <div class="card-body p-4">
+                        <div class="mb-3 text-warning"><i class="fas fa-chart-line fa-2x"></i></div>
+                        <h3 class="card-title fw-bold">Motore Economico</h3>
+                        <p class="card-text text-muted">Sede della Borsa Italiana e delle più grandi multinazionali. I nuovi quartieri come CityLife e Porta Nuova hanno ridisegnato lo skyline, portando Milano nel futuro dell'architettura sostenibile.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div> </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="m-0 small">© 2024 Progetto Scuola Milano.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

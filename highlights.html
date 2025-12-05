@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlights - Cose da non perdere</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar fixed-top navbar-dark bg-transparent p-3 transition-navbar">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <button class="btn btn-light btn-burger shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLaterale">
+                <i class="fas fa-bars"></i> <span class="d-none d-sm-inline">MENU</span>
+            </button>
+            <span class="navbar-brand fw-bold text-white text-shadow fs-3">MILANO</span>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuLaterale">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Navigazione</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center text-center">
+            <ul class="navbar-nav fs-3">
+                <li class="nav-item my-2"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="descrizione.html">Descrizione</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-warning active" href="highlights.html">Highlights</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="mezzi.html">Mezzi Pubblici</a></li>
+                <li class="nav-item my-2"><a class="nav-link text-white" href="mappa.html">Mappa</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="page-header d-flex align-items-center justify-content-center text-center text-white" 
+            style="background: url('img/grattacieli-skyline-milano.jpg') no-repeat center center/cover;">
+        <div class="overlay"></div>
+        <div class="content z-1 container">
+            <h1 class="fw-bold display-3">Top Selection</h1>
+            <p class="lead">Le 4 esperienze che definiscono Milano.</p>
+        </div>
+    </header>
+
+    <section class="container my-5 py-3">
+
+        <div class="row featurette align-items-center mb-5">
+            <div class="col-md-7">
+                <h2 class="fw-bold display-6">L'Ultima Cena</h2>
+                <p class="text-muted mb-0">Patrimonio UNESCO</p>
+                <div class="separator mb-3" style="width: 40px;"></div>
+                <p class="lead">
+                    Nascosto nel refettorio di Santa Maria delle Grazie, il capolavoro di Leonardo da Vinci è un'opera fragile e magnetica. Prenotare la visita è difficile, ma ammirare questo affresco dal vivo è un'emozione irripetibile.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="img/ultima-cena-leonardo-orig.jpeg" class="img-fluid rounded-4 shadow hover-card" alt="Cenacolo Vinciano">
+            </div>
+        </div>
+
+        <hr class="featurette-divider my-5 opacity-25">
+
+        <div class="row featurette align-items-center mb-5">
+            <div class="col-md-7 order-md-2">
+                <h2 class="fw-bold display-6">Teatro alla Scala</h2>
+                <p class="text-muted mb-0">Il tempio della Lirica</p>
+                <div class="separator mb-3" style="width: 40px;"></div>
+                <p class="lead">
+                    Inaugurato nel 1778, è il teatro d'opera più famoso al mondo. La sua stagione apre ogni anno il 7 dicembre, giorno di Sant'Ambrogio. Anche se non vedi un'opera, visita il museo teatrale per affacciarti sui palchi dorati.
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="img/tetaro.jpg" class="img-fluid rounded-4 shadow hover-card" alt="Teatro alla Scala">
+            </div>
+        </div>
+
+        <hr class="featurette-divider my-5 opacity-25">
+
+        <div class="row featurette align-items-center mb-5">
+            <div class="col-md-7">
+                <h2 class="fw-bold display-6">Bosco Verticale</h2>
+                <p class="text-muted mb-0">Architettura Sostenibile</p>
+                <div class="separator mb-3" style="width: 40px;"></div>
+                <p class="lead">
+                    Eletto "Grattacielo più bello del mondo", il Bosco Verticale nel quartiere Isola rappresenta la nuova Milano green. Due torri residenziali che ospitano più di 900 alberi sulle terrazze, cambiando colore con le stagioni.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="img/Bosco_verticale.jpg" class="img-fluid rounded-4 shadow hover-card" alt="Bosco Verticale">
+            </div>
+        </div>
+
+        <hr class="featurette-divider my-5 opacity-25">
+
+        <div class="row featurette align-items-center mb-5">
+            <div class="col-md-7 order-md-2">
+                <h2 class="fw-bold display-6">San Siro</h2>
+                <p class="text-muted mb-0">La Scala del Calcio</p>
+                <div class="separator mb-3" style="width: 40px;"></div>
+                <p class="lead">
+                    Uno degli stadi più iconici d'Europa, casa di Milan e Inter. Con la sua architettura imponente e le torri a spirale, è una tappa obbligatoria per gli amanti dello sport e dei grandi concerti internazionali.
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="img/Stadio_Meazza_2022.jpg" class="img-fluid rounded-4 shadow hover-card" alt="Stadio San Siro">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="m-0 small">© 2024 Progetto Scuola Milano.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

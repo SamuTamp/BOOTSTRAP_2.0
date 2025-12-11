@@ -1,78 +1,213 @@
 <!DOCTYPE html>
+<!-- 
+Dichiara al browser che questo documento usa HTML5.
+Fondamentale per evitare comportamenti "vecchi" o modalità compatibilità.
+-->
 <html lang="it">
+<!-- 
+Apre l'intero documento HTML.
+lang="it" indica ai browser, lettori di schermo e motori di ricerca 
+che la lingua predefinita della pagina è l’italiano.
+-->
 <head>
-    <!-- Dichiara il tipo di documento come HTML5 -->
+    <!-- METADATI DEL DOCUMENTO (non visibili nella pagina, ma fondamentali) -->
     <meta charset="UTF-8">
-    <!-- Imposta la codifica dei caratteri per supportare lettere accentate e simboli -->
+    <!--
+    Imposta la codifica dei caratteri in UTF-8,
+    essenziale per visualizzare correttamente lettere accentate, simboli, emoji.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Permette al sito di adattarsi ai dispositivi mobili -->
+    <!--
+    Rende il sito responsive.
+    width=device-width → usa la larghezza reale del dispositivo
+    initial-scale=1.0 → evita zoom automatici sui telefoni
+    -->
     <title>Milano - The City of Style</title>
-    <!-- Titolo della pagina che appare sulla scheda del browser -->
-    <!-- Inclusione del framework CSS Bootstrap per layout responsivi e componenti già pronti -->
+    <!-- 
+    Titolo che appare sulla scheda del browser e nei risultati dei motori di ricerca.
+    -->
+    <!-- BOOTSTRAP CSS → libreria front-end per layout, griglie, componenti responsivi -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Libreria di icone Font Awesome -->
+    <!-- FONT AWESOME → icone vettoriali (hamburger, frecce, simboli, ecc.) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Collegamento al foglio di stile personalizzato -->
+    <!-- CSS PERSONALIZZATO per sovrascrivere o aggiungere stili a Bootstrap -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVBAR FISSA IN ALTO CON BOTTONE MENU LATERALE (OFFCANVAS) -->
+    <!-- 
+    TUTTO CIÒ CHE L'UTENTE VEDE È DENTRO <body>.
+    -->
+    <!-- NAVBAR FISSA + MENU LATERALE OFFCANVAS -->
     <nav class="navbar fixed-top navbar-dark bg-transparent p-3 transition-navbar">
+        <!-- 
+        navbar            → componente Bootstrap
+        fixed-top         → resta incollata in alto anche mentre si scrolla
+        navbar-dark       → testo chiaro (per sfondi scuri o trasparenti)
+        bg-transparent    → permette di vedere l’immagine di sfondo sotto
+        p-3               → padding 1rem
+        transition-navbar → classe definita nel CSS per animazioni (es: cambia aspetto on-scroll)
+        -->
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <!-- Bottone hamburger per aprire il menu laterale -->
-            <button class="btn btn-light btn-burger shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLaterale">
-                <i class="fas fa-bars"></i> 
+            <!-- 
+            container-fluid  → larghezza 100%, utile nelle navbar
+            d-flex           → usa flexbox
+            justify-content-between → elementi agli estremi (sinistra e destra)
+            align-items-center       → centratura verticale degli elementi
+            -->
+            <!-- Bottone menu hamburger (solo grafica, funziona grazie a data-bs-toggle) -->
+            <button class="btn btn-light btn-burger shadow-sm"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#menuLaterale">
+                <!-- 
+                btn btn-light       → bottone chiaro
+                btn-burger          → classe definita in style.css
+                shadow-sm           → piccola ombra
+                data-bs-toggle=offcanvas → attiva la sidebar laterale
+                data-bs-target=#menuLaterale → collega questo bottone al menu offcanvas
+                -->
+                <i class="fas fa-bars"></i>
+                <!-- Icona hamburger (tre linee) -->
                 <span class="d-none d-sm-inline">MENU</span>
+                <!-- 
+                d-none        → nascosto su telefoni
+                d-sm-inline   → visibile da "small" (576px) in su
+                -->
             </button>
-            <!-- Titolo del sito visibile nella navbar -->
-            <span class="navbar-brand fw-bold text-white text-shadow fs-3">MILANO</span>
+            <!-- TITOLO nella navbar -->
+            <span class="navbar-brand fw-bold text-white text-shadow fs-3">
+                MILANO
+            </span>
+            <!-- 
+            navbar-brand   → stile di Bootstrap per i loghi/titoli nelle navbar
+            fw-bold        → testo in grassetto
+            text-white     → colore bianco
+            text-shadow    → classe personalizzata che aggiunge un'ombra
+            fs-3           → font-size grande (≈1.75rem)
+            -->
         </div>
     </nav>
-    <!-- MENU LATERALE (OFFCANVAS) CHE SI APRE DA SINISTRA -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuLaterale">
+    <!-- MENU LATERALE OFFCANVAS (si apre da sinistra) -->
+    <div class="offcanvas offcanvas-start bg-dark text-white"
+         tabindex="-1"
+         id="menuLaterale">
+        <!-- 
+        offcanvas-start → il menu entra da sinistra
+        bg-dark         → sfondo nero
+        text-white      → testo bianco
+        tabindex="-1"   → abilita la gestione del focus per accessibilità
+        id              → collegato al bottone della navbar
+        -->
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Navigazione</h5>
-            <!-- Bottone per chiudere il menu -->
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            <!-- Bottone di chiusura (in alto a destra) -->
+            <button type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"></button>
+            <!-- btn-close-white = versione chiara della "X" -->
         </div>
         <div class="offcanvas-body d-flex flex-column justify-content-center text-center">
-            <!-- Lista dei collegamenti del menu -->
+            <!-- 
+            d-flex flex-column       → elementi uno sotto l’altro
+            justify-content-center   → centra verticalmente
+            text-center              → testo centrato
+            -->
             <ul class="navbar-nav fs-3">
-                <li class="nav-item my-2"><a class="nav-link text-white active" href="index.html">Home</a></li>
-                <li class="nav-item my-2"><a class="nav-link text-white" href="descrizione.html">Descrizione</a></li>
-                <li class="nav-item my-2"><a class="nav-link text-white" href="highlights.html">Highlights</a></li>
-                <li class="nav-item my-2"><a class="nav-link text-white" href="mezzi.html">Mezzi Pubblici</a></li>
-                <li class="nav-item my-2"><a class="nav-link text-white" href="mappa.html">Mappa</a></li>
+                <!-- 
+                navbar-nav → lista navigazione della navbar
+                fs-3       → font grande
+                -->
+                <li class="nav-item my-2">
+                    <a class="nav-link text-white active" href="index.html">Home</a>
+                    <!-- active → evidenzia la pagina corrente -->
+                </li>
+                <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="descrizione.html">Descrizione</a>
+                </li>
+                <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="highlights.html">Highlights</a>
+                </li>
+                <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="mezzi.html">Mezzi Pubblici</a>
+                </li>
+                <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="mappa.html">Mappa</a>
+                </li>
             </ul>
         </div>
     </div>
-    <!-- SEZIONE HERO: GRANDE IMMAGINE DI COPERTINA CON TESTO CENTRALE -->
+    <!-- SEZIONE HERO CON IMMAGINE DI COPERTINA -->
     <header class="hero-section d-flex align-items-center justify-content-center text-center text-white px-3">
-        <!-- Overlay scuro per rendere il testo più leggibile sull'immagine di sfondo -->
+        <!-- 
+        hero-section → definita nel CSS: imposta immagine di sfondo full-screen
+        d-flex align-items-center justify-content-center → centra tutto al centro
+        text-center text-white → testo centrato e bianco
+        px-3 → padding orizzontale
+        -->
+        <!-- Overlay scuro sopra l’immagine per migliorare contrasto -->
         <div class="overlay"></div>
+        <!-- 
+        L’overlay è posizionato assolutamente con z-index basso,
+        ma sopra l’immagine → scurisce lo sfondo senza intaccare il testo.
+        -->
+        <!-- CONTENUTO PRINCIPALE DELL'HERO -->
         <div class="content z-1 container">
-            <!-- Titolo principale della pagina -->
+            <!-- 
+            z-1 → porta il contenuto sopra l’overlay
+            container → margini orizzontali regolati
+            -->
             <h1 class="main-title fw-bold">MILANO</h1>
-            <!-- Sottotitolo introduttivo -->
+            <!-- main-title → classe personalizzata che controlla dimensione e font -->
             <p class="lead fs-4">Moda. Storia. Innovazione.</p>
-            <!-- Pulsante che porta alla sezione gallery -->
-            <a href="#gallery" class="btn btn-outline-light mt-3 btn-lg rounded-pill px-5">Scopri</a>
+            <!-- lead = stile Bootstrap per sottotitoli importanti -->
+            <!-- Pulsante che scorre verso la gallery -->
+            <a href="#gallery" class="btn btn-outline-light mt-3 btn-lg rounded-pill px-5">
+                Scopri
+            </a>
+            <!-- 
+            btn-outline-light → bottone solo contorno bianco
+            btn-lg → versione grande
+            rounded-pill → bordo molto arrotondato
+            px-5 → padding orizzontale grande
+            -->
         </div>
     </header>
-    <!-- SEZIONE GALLERY CON LE 3 ICONE PIÙ FAMOSE DI MILANO -->
+    <!-- SEZIONE GALLERY -->
     <section id="gallery" class="container my-5 py-5">
+        <!-- 
+        id="gallery" → ancora interna per lo scroll del bottone "Scopri"
+        container   → margini laterali
+        my-5        → margine verticale
+        py-5        → padding verticale
+        -->
         <div class="text-center mb-5">
             <h2 class="fw-bold">I Simboli</h2>
-            <!-- Linea decorativa -->
             <div class="separator mx-auto"></div>
+            <!-- 
+            separator → linea decorativa definita nel CSS
+            mx-auto  → centrata
+            -->
         </div>
-        <!-- GRID CON LE CARDS -->
+        <!-- GRIGLIA CON LE TRE CARDS -->
         <div class="row g-4">
+            <!-- g-4 = gap di 1.5rem tra le colonne -->
             <!-- CARD DUOMO -->
             <div class="col-12 col-md-6 col-lg-4">
+                <!-- 
+                col-12 → su smartphone occupa tutta la larghezza
+                col-md-6 → da 768px in su diventa metà
+                col-lg-4 → da 992px in su diventa 1/3
+                -->
                 <div class="card h-100 border-0 shadow-sm hover-card">
-                    <!-- Immagine del Duomo -->
+                    <!-- 
+                    h-100 → altezza 100%, tutte le card risultano uguali
+                    border-0 → rimuove bordi
+                    shadow-sm → piccola ombra
+                    hover-card → effetto hover personalizzato nel CSS
+                    -->
+
                     <img src="img/duomo1.jpg" class="card-img-top" alt="Duomo di Milano">
+
                     <div class="card-body">
                         <h3>Il Duomo</h3>
                         <p class="text-muted">Il cuore gotico della città.</p>
@@ -83,6 +218,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <img src="img/galleria.jpg" class="card-img-top" alt="Galleria Vittorio Emanuele II">
+
                     <div class="card-body">
                         <h3>La Galleria</h3>
                         <p class="text-muted">Il salotto di Milano.</p>
@@ -93,6 +229,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm hover-card">
                     <img src="img/Navigli.jpg" class="card-img-top" alt="Navigli di Milano">
+
                     <div class="card-body">
                         <h3>I Navigli</h3>
                         <p class="text-muted">La movida sui canali.</p>
@@ -100,19 +237,35 @@
                 </div>
             </div>
         </div>
-        <!-- SEZIONE TESTO + IMMAGINE AFFIANCATA -->
+        <!-- SEZIONE TESTO + IMMAGINE LATO -->
         <div class="row mt-5 pt-5 align-items-center">
-            <!-- Colonna del testo -->
+            <!-- 
+            mt-5 pt-5 → spazio sopra
+            align-items-center → centratura verticale
+            -->
+            <!-- COLONNA TESTO -->
             <div class="col-lg-6 order-2 order-lg-1">
+                <!-- 
+                order-2        → sul mobile il testo appare sotto l’immagine
+                order-lg-1     → da desktop torna a sinistra
+                -->
                 <h2 class="fw-bold">Una città che corre</h2>
                 <p class="lead text-secondary">
                     Milano è la capitale economica, ma offre anche angoli di pace inaspettati.
                     Dai grattacieli di Porta Nuova ai vicoli artistici di Brera.
                 </p>
             </div>
-            <!-- Colonna con immagine -->
+            <!-- COLONNA IMMAGINE -->
             <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                <img src="img/citylife1.jpg" class="img-fluid rounded-4 shadow" alt="Milano City Life">
+                <!-- order-1 → immagine sopra il testo sui telefoni -->
+                <img src="img/citylife1.jpg"
+                     class="img-fluid rounded-4 shadow"
+                     alt="Milano City Life">
+                <!-- 
+                img-fluid → immagine responsive
+                rounded-4 → angoli arrotondati
+                shadow    → ombra
+                -->
             </div>
         </div>
     </section>
@@ -120,9 +273,9 @@
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <p class="m-0 small">© 2025 Progetto scolastico.</p>
     </footer>
-    <!-- JAVASCRIPT DI BOOTSTRAP (per menu laterale, navbar, ecc.) -->
+    <!-- JAVASCRIPT DI BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script personalizzato -->
+    <!-- SCRIPT PERSONALIZZATO -->
     <script src="js/script.js"></script>
 </body>
 </html>

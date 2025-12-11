@@ -1,415 +1,291 @@
 <!DOCTYPE html>
 <!-- Dichiara che il documento è in formato HTML5 -->
-
 <html lang="it">
 <!-- Apre l’elemento principale HTML e imposta la lingua italiana -->
-
 <head>
 <!-- Sezione head: contiene metadati, titolo, link a risorse esterne -->
-
     <meta charset="UTF-8">
     <!-- Imposta la codifica dei caratteri su UTF-8, standard universale -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Rende la pagina responsive su dispositivi mobili -->
-
     <title>Trasporti - ATM Milano</title>
     <!-- Titolo della scheda del browser -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Collegamento al CSS di Bootstrap 5 per lo stile base -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Collegamento alle icone Font Awesome -->
-
     <link rel="stylesheet" href="css/style.css">
     <!-- Collegamento al foglio di stile personalizzato -->
-
 </head>
 <!-- Fine sezione head -->
-
 <body>
 <!-- Inizio del corpo visibile della pagina -->
-
     <nav class="navbar fixed-top navbar-dark bg-transparent p-3 transition-navbar">
     <!-- Barra di navigazione fissata in alto con sfondo trasparente -->
-
         <div class="container-fluid d-flex justify-content-between align-items-center">
         <!-- Contenitore fluido che distribuisce gli elementi ai lati -->
-
             <button class="btn btn-light btn-burger shadow-sm"
                     type="button"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#menuLaterale">
             <!-- Bottone che apre il menu laterale offcanvas -->
-
                 <i class="fas fa-bars"></i>
                 <!-- Icona hamburger del menu -->
-
                 <span class="d-none d-sm-inline">MENU</span>
                 <!-- Testo MENU (visibile solo da schermi ≥ sm) -->
-
             </button>
             <!-- Fine bottone menu -->
-
             <span class="navbar-brand fw-bold text-white text-shadow fs-3">MILANO</span>
             <!-- Titolo/brand al centro della navbar -->
-
         </div>
         <!-- Fine container navbar -->
-
     </nav>
     <!-- Fine barra di navigazione -->
-
     <div class="offcanvas offcanvas-start bg-dark text-white"
          tabindex="-1"
          id="menuLaterale">
     <!-- Menu laterale offcanvas che compare da sinistra -->
-
         <div class="offcanvas-header">
         <!-- Header del menu offcanvas -->
-
             <h5 class="offcanvas-title">Navigazione</h5>
             <!-- Titolo dell’offcanvas -->
-
             <button type="button"
                     class="btn-close btn-close-white"
                     data-bs-dismiss="offcanvas">
             </button>
             <!-- Pulsante per chiudere il menu -->
-
         </div>
         <!-- Fine header offcanvas -->
-
         <div class="offcanvas-body d-flex flex-column justify-content-center text-center">
         <!-- Corpo del menu, contenuto centrato verticalmente -->
-
             <ul class="navbar-nav fs-3">
             <!-- Lista delle voci del menu, testo grande -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="index.html">Home</a>
                 </li>
                 <!-- Link Home -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="descrizione.html">Descrizione</a>
                 </li>
                 <!-- Link Descrizione -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="highlights.html">Highlights</a>
                 </li>
                 <!-- Link Highlights -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-warning active" href="mezzi.html">Mezzi Pubblici</a>
                 </li>
                 <!-- Link attivo Mezzi Pubblici -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="mappa.html">Mappa</a>
                 </li>
                 <!-- Link Mappa -->
-
             </ul>
             <!-- Fine elenco navigazione -->
-
         </div>
         <!-- Fine body offcanvas -->
-
     </div>
     <!-- Fine menu laterale offcanvas -->
-
     <header class="page-header d-flex align-items-center justify-content-center text-center text-white"
             style="background: url('img/metro-1.jpg') no-repeat center center/cover;">
     <!-- Header della pagina con immagine di sfondo a schermo intero -->
-
         <div class="overlay"></div>
         <!-- Livello scuro semi-trasparente sopra lo sfondo per migliorare leggibilità -->
-
         <div class="content z-1 container">
         <!-- Contenitore del contenuto del titolo -->
-
             <h1 class="fw-bold display-3">Muoversi a Milano</h1>
             <!-- Titolo principale molto grande -->
-
             <p class="lead">Efficienza, velocità e sostenibilità.</p>
             <!-- Sottotitolo -->
-
         </div>
         <!-- Fine content header -->
-
     </header>
     <!-- Fine header -->
     <section class="container my-5">
     <!-- Sezione principale con margini verticali, contenitore centrale -->
-
         <div class="row mb-4">
         <!-- Riga per titolo e sottotitolo -->
-
             <div class="col-12 text-center">
             <!-- Colonna unica, testo centrato -->
-
                 <h2 class="fw-bold">Stato Linee Metropolitane</h2>
                 <!-- Titolo della sezione -->
-
                 <p class="text-muted">Aggiornamento in tempo reale</p>
                 <!-- Sottotitolo in grigio chiaro -->
-
             </div>
             <!-- Fine colonna -->
-
         </div>
         <!-- Fine riga -->
-
         <div class="row g-3 justify-content-center">
         <!-- Riga delle card delle linee metro con gap 3 e centrato -->
-
             <div class="col-6 col-md-2">
             <!-- Colonna responsive: metà larghezza su xs, 2/12 su md -->
-
                 <div class="card metro-card border-0 shadow-sm text-center py-3 m1-line">
                 <!-- Card personalizzata per la linea M1, senza bordi, con ombra -->
-
                     <div class="card-body">
                     <!-- Corpo della card -->
-
                         <h1 class="fw-bold text-white mb-0">M1</h1>
                         <!-- Nome linea grande -->
-
                         <span class="badge bg-white text-danger mt-2">Rossa</span>
                         <!-- Badge con colore della linea -->
-
                         <div class="status-indicator mt-3">
                             <div class="pulse-green"></div> Regolare
                         </div>
                         <!-- Indicatore stato linea: verde = regolare -->
-
                     </div>
                     <!-- Fine card-body -->
-
                 </div>
                 <!-- Fine card -->
-
             </div>
             <!-- Fine colonna M1 -->
-
             <div class="col-6 col-md-2">
             <!-- Colonna M2 -->
-
                 <div class="card metro-card border-0 shadow-sm text-center py-3 m2-line">
                     <div class="card-body">
-
                         <h1 class="fw-bold text-white mb-0">M2</h1>
                         <span class="badge bg-white text-success mt-2">Verde</span>
                         <div class="status-indicator mt-3"><div class="pulse-green"></div> Regolare</div>
-
                     </div>
                 </div>
-
             </div>
             <!-- Fine colonna M2 -->
-
             <div class="col-6 col-md-2">
             <!-- Colonna M3 -->
-
                 <div class="card metro-card border-0 shadow-sm text-center py-3 m3-line">
                     <div class="card-body">
-
                         <h1 class="fw-bold text-white mb-0">M3</h1>
                         <span class="badge bg-white text-warning text-dark mt-2">Gialla</span>
                         <div class="status-indicator mt-3"><div class="pulse-green"></div> Regolare</div>
-
                     </div>
                 </div>
-
             </div>
             <!-- Fine colonna M3 -->
-
             <div class="col-6 col-md-2">
             <!-- Colonna M4 -->
-
                 <div class="card metro-card border-0 shadow-sm text-center py-3 m4-line">
                     <div class="card-body">
-
                         <h1 class="fw-bold text-white mb-0">M4</h1>
                         <span class="badge bg-white text-primary mt-2">Blu</span>
                         <div class="status-indicator mt-3"><div class="pulse-green"></div> Regolare</div>
-
                     </div>
                 </div>
-
             </div>
             <!-- Fine colonna M4 -->
-
             <div class="col-6 col-md-2">
             <!-- Colonna M5 -->
-
                 <div class="card metro-card border-0 shadow-sm text-center py-3 m5-line">
                     <div class="card-body">
-
                         <h1 class="fw-bold text-white mb-0">M5</h1>
                         <span class="badge bg-white text-secondary mt-2">Lilla</span>
                         <div class="status-indicator mt-3"><div class="pulse-green"></div> Regolare</div>
-
                     </div>
                 </div>
-
             </div>
             <!-- Fine colonna M5 -->
-
         </div>
         <!-- Fine row card linee metro -->
-
     </section>
     <!-- Fine sezione stato linee metro -->
     <section class="bg-light py-5">
     <!-- Sezione con sfondo chiaro e padding verticale -->
-
         <div class="container">
         <!-- Contenitore centrale -->
-
             <div class="row align-items-center">
             <!-- Riga con allineamento verticale centrato -->
-
                 <div class="col-lg-5 mb-4 mb-lg-0">
                 <!-- Colonna sinistra: testo, margine inferiore su schermi piccoli -->
-
                     <h2 class="fw-bold">La Rete Integrata</h2>
                     <!-- Titolo sezione -->
-
                     <p class="lead text-secondary">La metropolitana di Milano copre oltre 100km. Scarica la mappa o esplorala online.</p>
                     <!-- Descrizione breve -->
-
                     <ul class="list-group list-group-flush shadow-sm rounded mb-4">
                     <!-- Lista con icone e informazioni principali, senza bordo tra gli elementi -->
-
                         <li class="list-group-item">
                             <i class="fas fa-ticket-alt text-warning me-2"></i> Biglietto Singolo: <strong>2,20€</strong>
                         </li>
                         <!-- Item 1: costo biglietto con icona -->
-
                         <li class="list-group-item">
                             <i class="fas fa-clock text-warning me-2"></i> Orari: <strong>05:30 - 00:30</strong>
                         </li>
                         <!-- Item 2: orari apertura/chiusura -->
-
                         <li class="list-group-item">
                             <i class="fas fa-mobile-alt text-warning me-2"></i> Pagamento Contactless ai tornelli
                         </li>
                         <!-- Item 3: modalità di pagamento -->
-
                     </ul>
                     <!-- Fine lista informazioni -->
-
                     <button class="btn btn-dark btn-lg rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#mapModal">
                         <i class="fas fa-search-plus me-2"></i> Apri Mappa Grande
                     </button>
                     <!-- Bottone per aprire la mappa in modalità fullscreen (modal) -->
-
                 </div>
                 <!-- Fine colonna sinistra -->
-
                 <div class="col-lg-7">
                 <!-- Colonna destra: anteprima mappa -->
-
                     <div class="map-preview rounded-4 shadow overflow-hidden position-relative" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mapModal">
                     <!-- Contenitore anteprima mappa, cliccabile per aprire modal -->
-
                         <img src="img/metro_mappa1.jpg" class="img-fluid" alt="Mappa Metropolitana Milano">
                         <!-- Immagine della mappa -->
-
                         <div class="overlay-hover d-flex align-items-center justify-content-center text-white">
                         <!-- Overlay visibile al passaggio del mouse -->
-
                             <span class="fs-4 fw-bold"><i class="fas fa-expand"></i> Clicca per ingrandire</span>
                             <!-- Testo indicativo per ingrandire la mappa -->
-
                         </div>
                         <!-- Fine overlay -->
-
                     </div>
                     <!-- Fine map-preview -->
-
                 </div>
                 <!-- Fine colonna destra -->
-
             </div>
             <!-- Fine row contenuto sezione -->
-
         </div>
         <!-- Fine container sezione -->
-
     </section>
     <!-- Fine sezione rete integrata -->
-
     <footer class="bg-dark text-white text-center py-4">
     <!-- Footer scuro con testo bianco centrato -->
-
         <p class="m-0 small">© 2024 Progetto Scuola Milano.</p>
         <!-- Copyright -->
-
     </footer>
     <!-- Fine footer -->
     <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
     <!-- Finestra modale Bootstrap per mostrare la mappa fullscreen -->
-
         <div class="modal-dialog modal-xl modal-dialog-centered">
         <!-- Dimensione extra-large e centrata verticalmente -->
-
             <div class="modal-content">
             <!-- Contenuto del modal -->
-
                 <div class="modal-header">
                 <!-- Header del modal -->
-
                     <h5 class="modal-title">Mappa ATM Milano</h5>
                     <!-- Titolo del modal -->
-
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <!-- Bottone per chiudere il modal -->
-
                 </div>
                 <!-- Fine header modal -->
-
                 <div class="modal-body p-0">
                 <!-- Corpo del modal senza padding -->
-
                     <img src="img/metro_mappa1.jpg" class="img-fluid w-100" alt="Mappa Fullscreen">
                     <!-- Immagine della mappa a larghezza piena -->
-
                 </div>
                 <!-- Fine body modal -->
-
                 <div class="modal-footer justify-content-center">
                 <!-- Footer del modal centrato -->
-
                     <a href="https://www.atm.it/it/ViaggiaConNoi/Pagine/SchemaRete.aspx" target="_blank" class="btn btn-outline-primary btn-sm">
                         <i class="fas fa-external-link-alt"></i> Sito Ufficiale ATM
                     </a>
                     <!-- Link esterno al sito ufficiale ATM -->
-
                 </div>
                 <!-- Fine footer modal -->
-
             </div>
             <!-- Fine modal-content -->
-
         </div>
         <!-- Fine modal-dialog -->
-
     </div>
     <!-- Fine modal mapModal -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script Bootstrap bundle con Popper.js incluso -->
-
     <script src="js/script.js"></script>
     <!-- Script personalizzato della pagina -->
-
 </body>
 <!-- Fine body -->
-
 </html>
 <!-- Fine documento HTML -->

@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <!-- Dichiara che il documento utilizza HTML5, lo standard moderno dei siti web -->
-
 <html lang="it">
 <!-- Apre il documento HTML e imposta la lingua principale del contenuto su italiano -->
-
 <head>
     <meta charset="UTF-8">
     <!-- Definisce la codifica dei caratteri come UTF-8 (necessario per lettere accentate, simboli, emoji) -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Rende la pagina responsive: imposta la larghezza uguale a quella dello schermo e lo zoom iniziale a 1 -->
-
     <title>Highlights - Cose da non perdere</title>
     <!-- Titolo che apparirà nella scheda del browser e nei risultati di Google -->
-
     <!-- Bootstrap CSS: framework per layout responsive, griglie, componenti UI -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Font Awesome: libreria di icone (menu hamburger, frecce, simboli vari) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <!-- File CSS personalizzato per ulteriori stili specifici del sito -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <!-- NAVBAR TRASPARENTE E FISSA IN ALTO -->
     <nav class="navbar fixed-top navbar-dark bg-transparent p-3 transition-navbar">
@@ -35,13 +27,11 @@
             p-3          = padding Bootstrap (1 = 0.25rem, 3 = 1rem)
             transition-navbar = classe personalizzata per animazioni sullo scroll
         -->
-
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <!-- container-fluid = contenitore a larghezza completa
                  d-flex = attiva flexbox
                  justify-content-between = elementi agli estremi
                  align-items-center = centrati verticalmente -->
-
             <!-- Pulsante hamburger per aprire menu laterale -->
             <button class="btn btn-light btn-burger shadow-sm"
                     type="button"
@@ -53,17 +43,14 @@
                     data-bs-toggle="offcanvas" = attiva componente offcanvas
                     data-bs-target = ID dell'elemento da aprire
                 -->
-
                 <i class="fas fa-bars"></i>
                 <!-- Icona FontAwesome con le tre linee dell’hamburger -->
-
                 <span class="d-none d-sm-inline">MENU</span>
                 <!-- 
                     d-none = nascosto su telefoni
                     d-sm-inline = appare solo da 576px in su
                 -->
             </button>
-
             <!-- Titolo MILANO nella navbar -->
             <span class="navbar-brand fw-bold text-white text-shadow fs-3">
                 MILANO
@@ -76,7 +63,6 @@
             -->
         </div>
     </nav>
-
     <!-- MENU LATERALE OFFCANVAS -->
     <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuLaterale">
         <!-- 
@@ -86,10 +72,8 @@
             tabindex="-1"      = permette la gestione del focus
             id="menuLaterale"  = usato dal pulsante sopra
         -->
-
         <div class="offcanvas-header">
             <h5 class="offcanvas-title">Navigazione</h5>
-
             <!-- Bottone per chiudere il menu -->
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
             <!-- 
@@ -98,40 +82,32 @@
                 data-bs-dismiss="offcanvas" = chiude il menu
             -->
         </div>
-
         <div class="offcanvas-body d-flex flex-column justify-content-center text-center">
             <!-- Corpo del menu: disposizione verticale e testo centrato -->
-
             <ul class="navbar-nav fs-3">
                 <!-- navbar-nav = lista di navigazione
                      fs-3 = testo grande -->
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="index.html">Home</a>
                 </li>
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="descrizione.html">Descrizione</a>
                 </li>
-
                 <!-- Pagina corrente -->
                 <li class="nav-item my-2">
                     <a class="nav-link text-warning active" href="highlights.html">
                         Highlights
                     </a>
                 </li>
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="mezzi.html">Mezzi Pubblici</a>
                 </li>
-
                 <li class="nav-item my-2">
                     <a class="nav-link text-white" href="mappa.html">Mappa</a>
                 </li>
             </ul>
         </div>
     </div>
-
     <!-- HEADER CON IMMAGINE -->
     <header class="page-header d-flex align-items-center justify-content-center text-center text-white"
             style="background: url('img/grattacieli-skyline-milano.jpg') no-repeat center center/cover;">
@@ -142,24 +118,19 @@
             - center center = centrata
             - cover = riempie l’area mantenendo le proporzioni
         -->
-
         <!-- Overlay: livello scuro sopra l’immagine -->
         <div class="overlay"></div>
-
         <div class="content z-1 container">
             <!-- z-1 = porta il contenuto sopra l’overlay -->
-
             <h1 class="fw-bold display-3">Top Selection</h1>
             <p class="lead">Le 4 esperienze che definiscono Milano.</p>
         </div>
     </header>
-
     <!-- SEZIONE PRINCIPALE -->
     <section class="container my-5 py-3">
         <!-- container = margini laterali
              my-5 = margine verticale grande
              py-3 = padding verticale -->
-
         <!-- FEATURETTE 1: L'Ultima Cena -->
         <div class="row featurette align-items-center mb-5">
             <!-- 
@@ -167,22 +138,17 @@
                 featurette = classe personalizzata (stile sezione)
                 align-items-center = allinea verticalmente al centro
             -->
-
             <!-- Colonna testo -->
             <div class="col-md-7">
                 <!-- 7 colonne su desktop, 12 su mobile -->
-
                 <h2 class="fw-bold display-6">L'Ultima Cena</h2>
                 <p class="text-muted mb-0">Patrimonio UNESCO</p>
-
                 <div class="separator mb-3" style="width: 40px;"></div>
                 <!-- Linea decorativa -->
-
                 <p class="lead">
                     Nascosto nel refettorio di Santa Maria delle Grazie [...]
                 </p>
             </div>
-
             <!-- Colonna immagine -->
             <div class="col-md-5">
                 <img src="img/ultima-cena-leonardo-orig.jpeg"
@@ -196,55 +162,44 @@
                 -->
             </div>
         </div>
-
         <!-- Linea divisoria -->
         <hr class="featurette-divider my-5 opacity-25">
         <!-- featurette-divider = stile personalizzato, opacity 25% -->
-
         <!-- FEATURETTE 2 -->
         <div class="row featurette align-items-center mb-5">
-
             <!-- Ordine invertito sui desktop (order-md-2) -->
             <div class="col-md-7 order-md-2">
                 <h2 class="fw-bold display-6">Teatro alla Scala</h2>
                 <p class="text-muted mb-0">Il tempio della Lirica</p>
                 <div class="separator mb-3" style="width: 40px;"></div>
-
                 <p class="lead">
                     Inaugurato nel 1778 [...]
                 </p>
             </div>
-
             <div class="col-md-5 order-md-1">
                 <img src="img/tetaro.jpg"
                      class="img-fluid rounded-4 shadow hover-card"
                      alt="Teatro alla Scala">
             </div>
         </div>
-
         <hr class="featurette-divider my-5 opacity-25">
-
         <!-- FEATURETTE 3 -->
         <div class="row featurette align-items-center mb-5">
             <div class="col-md-7">
                 <h2 class="fw-bold display-6">Bosco Verticale</h2>
                 <p class="text-muted mb-0">Architettura Sostenibile</p>
                 <div class="separator mb-3" style="width: 40px;"></div>
-
                 <p class="lead">
                     Eletto "Grattacielo più bello del mondo" [...]
                 </p>
             </div>
-
             <div class="col-md-5">
                 <img src="img/Bosco_verticale.jpg"
                      class="img-fluid rounded-4 shadow hover-card"
                      alt="Bosco Verticale">
             </div>
         </div>
-
         <hr class="featurette-divider my-5 opacity-25">
-
         <!-- FEATURETTE 4 -->
         <div class="row featurette align-items-center mb-5">
             <div class="col-md-7 order-md-2">
@@ -256,7 +211,6 @@
                     Uno degli stadi più iconici d'Europa [...]
                 </p>
             </div>
-
             <div class="col-md-5 order-md-1">
                 <img src="img/Stadio_Meazza_2022.jpg"
                      class="img-fluid rounded-4 shadow hover-card"
@@ -264,7 +218,6 @@
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <!-- bg-dark = sfondo scuro
@@ -273,12 +226,9 @@
              py-4 = padding verticale -->
         <p class="m-0 small">© 2024 Progetto Scuola Milano.</p>
     </footer>
-
     <!-- SCRIPT DI BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Script personalizzato -->
     <script src="js/script.js"></script>
-
 </body>
 </html>
